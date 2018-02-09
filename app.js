@@ -74,7 +74,7 @@ function highlight(){
 //}
 
 
-function gotoPage(id)
+//function gotoPage(id)
 
 function detail(id){
     if(!window._G){
