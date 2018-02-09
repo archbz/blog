@@ -73,8 +73,25 @@ function highlight(){
 //    jQuery(container).append(el);
 //}
 
-
-//function gotoPage(id)
+function gotoPage(id)
+{
+    setTitle(config.blog_name);
+    setFooter();
+    getJSON(getIssuesUrl(id), function(data) {
+        setTitle(config.blog_name + " - " + data.title);
+        var title = document.getElementById("title");
+        var txt = document.createTextNode(data.title);
+        title.appendChild(txt);
+        var content = document.getElementById("content");
+        renderMarkdown(content, data.body);
+        var comment = document.getElementById("comment");
+        var href = document.createElement("a");
+        href.href = getCommentUrl(id);
+        var txt = document.createTextNode("Click here to comments");
+        href.appendChild(txt);
+        comment.appendChild(href);
+    });
+}
 
 function detail(id){
     if(!window._G){
