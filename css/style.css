@@ -50,6 +50,7 @@ h2{
 }
 
 #header{
+  position:relative;
   left:45%;
   margin-bottom: 20px;
 }
