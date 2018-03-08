@@ -50,6 +50,8 @@ h2{
 }
 
 #header{
+  position:fixed;
+  left:50%;
   margin-bottom: 20px;
 }
 .postlist{
